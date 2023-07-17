@@ -7,7 +7,6 @@
 body {
   background-color: #070015;
   padding: 33px 15px 50px;
-  .container();
 
 }
 
@@ -95,6 +94,7 @@ body {
 }
 
 .header {
+  .container();
 
 
   display: flex;
@@ -108,6 +108,7 @@ body {
     svg {
       width: 36px;
       height: 36px;
+      fill: #6224df;
     }
   }
 
@@ -167,10 +168,11 @@ body {
 }
 
 .info {
+  .container();
+
   display: flex;
   color: #ffffff;
-  //width: 50%;
-  //column-gap: 115px;
+  //flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 90px;
@@ -222,6 +224,8 @@ body {
 
 
 .advantages {
+  .container();
+
   display: flex;
   gap: 60px;
   align-items: center;
@@ -259,6 +263,8 @@ body {
 }
 
 .masters {
+  .container();
+
   margin-bottom: 115px;
 
   h1 {
@@ -282,6 +288,7 @@ body {
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
+    justify-content: center;
 
     .slide {
       max-width: 350px;
@@ -342,6 +349,8 @@ body {
 }
 
 .menu {
+  .container();
+
   margin-bottom: 153px;
 
   .menu-title {
@@ -381,6 +390,8 @@ body {
   }
 
   .menu-cards {
+    .container();
+
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
@@ -433,6 +444,10 @@ body {
 }
 
 .stocks {
+  .container();
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 150px;
 
   h2 {
@@ -462,6 +477,11 @@ body {
       flex-direction: column;
       gap: 20px;
 
+      img {
+        height: 222px;
+        width: 445px;
+      }
+
       .stocks-card-description {
         font-size: 15px;
         font-family: "Montserrat", sans-serif;
@@ -473,6 +493,8 @@ body {
 }
 
 .interior {
+  .container();
+
   margin-bottom: 270px;
 
   h2 {
@@ -491,6 +513,8 @@ body {
 }
 
 .booking {
+  .container();
+
   background-image: url("../src/images/boocking-bg.png");
   padding: 60px 270px;
   background-repeat: no-repeat;
@@ -567,6 +591,8 @@ body {
 }
 
 .location {
+  .container();
+
   margin-bottom: 110px;
 
   .location-title {
@@ -628,6 +654,8 @@ body {
 }
 
 .footer {
+  .container();
+
   .footer-content {
     display: flex;
     justify-content: space-between;
@@ -654,7 +682,7 @@ body {
 @import "fonts";
 @import "slider";
 @import "loader";
-//@import "adaptive";
+@import "adaptive";
 
 @import "node_modules/animate.css/animate.min.css";
 @import "node_modules/magnific-popup/dist/magnific-popup.css";
