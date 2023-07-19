@@ -1,7 +1,13 @@
+.flex() {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 1149px) {
   .header {
     .burger {
       display: block;
+      z-index: 1000;
     }
 
     .header-navigation {
@@ -28,11 +34,255 @@
       }
     }
   }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
   .advantages {
     flex-wrap: wrap;
     justify-content: center;
+
+    .cards {
+      max-width: 460px;
+    }
+  }
+
+
+  .masters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .menu-cards {
+      justify-content: center;
+
+      .menu-card {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .stocks {
+    align-items: center;
+    text-align: center;
+
+    .stocks-cards {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .interior {
+    text-align: center;
+
+    .interior-photos {
+      justify-content: center;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+      margin: 0 0 35px 0;
+
+      .work-time {
+        display: none;
+      }
+
+      .phone {
+        display: none;
+      }
+    }
+
+    .info {
+      gap: 30px;
+      justify-content: center;
+      text-align: center;
+
+      .info-btn {
+        margin: auto;
+      }
+
+      .hooker-1 {
+        display: none;
+      }
+
+      .hooker-2 {
+        display: flex;
+      }
+    }
+
+    .advantages {
+      margin-bottom: 30px;
+    }
+
+    .masters {
+      margin-bottom: 30px;
+
+    }
+
+    .menu {
+      margin-bottom: 30px;
+      .menu-card {
+        text-align: center;
+        padding: 10px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .stocks {
+      margin-bottom: 30px;
+    }
+
+    .interior {
+      margin-bottom: 50px;
+    }
+
+    .booking {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+
+
+      .booking-block {
+        width: 420px;
+      }
+    }
+
+    .location {
+      text-align: center;
+
+      .location-content {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .location-work-time {
+          align-items: center;
+        }
+
+        .location-social {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: 767px) {
+  .advantages {
+    .cards {
+      text-align: center;
+
+      .card-1 {
+        .flex();
+        img {
+          order: 2;
+        }
+
+      }
+
+      .card-2 {
+        .card-3_1 {
+          display: none;
+        }
+        .card-3_2 {
+          display: block;
+        }
+      }
+
+      .card-3 {
+        .flex();
+        //width: auto;
+
+        p {
+          width: auto;
+        }
+        width: 100%;
+      }
+
+      .card-4 {
+        display: none;
+      }
+      img {
+        max-height: 200px;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .menu {
+    .menu-card {
+      flex-direction: column;
+      .menu-description > * {
+          margin: 0;
+      }
+    }
+  }
+
+  .interior {
+    margin: 0;
+    .interior-photos {
+      max-width: 368px;
+      margin: auto;
+      img {
+        width: 100%;
+        height: 178px;
+      }
+    }
+  }
+
+  .booking {
+    background-image: none;
+    padding: 0;
+  }
+
+  .location {
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    .footer-content {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      flex-direction: column;
+      align-items: center;
+      .footer-right_group {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .footer-btn {
+          padding: 17px;
+        }
+      }
+    }
+    .rights {
+      display: none;
+    }
   }
 }
+
+@media screen and (max-width: 424px) {
+
+}
+
+
+
 
 .header-navigation.open {
   display: block;
