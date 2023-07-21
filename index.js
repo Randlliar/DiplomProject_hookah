@@ -17,7 +17,7 @@ circleMenu.addClass('hidden');
 
 const stocks = [stocks_1, stocks_2, stocks_3];
 
-let interior_1= $("#interior_1");
+let interior_1 = $("#interior_1");
 let interior_2 = $("#interior_2");
 let interior_3 = $("#interior_3");
 let interior_4 = $("#interior_4");
@@ -87,7 +87,6 @@ for (let i = 0; i < slides.length; i++) {
 }
 
 
-
 for (let i = 0; i < stocks.length; i++) {
   let buttonCircle = document.createElement("button");
   buttonCircle.setAttribute('class', 'btn circle-btn');
@@ -102,8 +101,6 @@ for (let i = 0; i < stocks.length; i++) {
   }
   circleMenu.append(buttonCircle);
 }
-
-
 
 
 for (let i = 0; i < interior.length; i++) {
@@ -159,7 +156,6 @@ window.onresize = function (event) {
 
     activeSlides = [0, 1];
   }
-
 
 
   if (window.screen.width <= 858) {

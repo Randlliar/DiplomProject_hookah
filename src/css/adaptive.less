@@ -93,97 +93,100 @@
 }
 
 @media screen and (max-width: 1023px) {
-    .header {
-      margin: 0 0 35px 0;
+  .header {
+    margin: 0 0 35px 0;
 
-      .work-time {
-        display: none;
-      }
-
-      .phone {
-        display: none;
-      }
+    .work-time {
+      display: none;
     }
 
-    .info {
-      gap: 30px;
-      justify-content: center;
-      text-align: center;
+    .phone {
+      display: none;
+    }
+  }
 
-      .info-btn {
-        margin: auto;
-      }
+  .info {
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
 
-      .hooker-1 {
-        display: none;
-      }
-
-      .hooker-2 {
-        display: flex;
-        justify-content: center;
-        .discount {
-          left: 25px;
-        }
-      }
+    .info-btn {
+      margin: auto;
     }
 
-    .advantages {
-      margin-bottom: 30px;
+    .hooker-1 {
+      display: none;
     }
 
-    .masters {
-      margin-bottom: 30px;
-
-    }
-
-    .menu {
-      margin-bottom: 30px;
-      .menu-card {
-        text-align: center;
-        padding: 10px;
-        p {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .stocks {
-      margin-bottom: 30px;
-    }
-
-    .interior {
-      margin-bottom: 50px;
-    }
-
-    .booking {
+    .hooker-2 {
       display: flex;
       justify-content: center;
-      margin-bottom: 50px;
 
-
-      .booking-block {
-        width: 420px;
-      }
-    }
-
-    .location {
-      text-align: center;
-      margin: 0 auto 50px;
-
-      .location-content {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .location-work-time {
-          align-items: center;
-        }
-
-        .location-social {
-          justify-content: center;
-        }
+      .discount {
+        left: 25px;
       }
     }
   }
+
+  .advantages {
+    margin-bottom: 30px;
+  }
+
+  .masters {
+    margin-bottom: 30px;
+
+  }
+
+  .menu {
+    margin-bottom: 30px;
+
+    .menu-card {
+      text-align: center;
+      padding: 10px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .stocks {
+    margin-bottom: 30px;
+  }
+
+  .interior {
+    margin-bottom: 50px;
+  }
+
+  .booking {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+
+    .booking-block {
+      width: 420px;
+    }
+  }
+
+  .location {
+    text-align: center;
+    margin: 0 auto 50px;
+
+    .location-content {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .location-work-time {
+        align-items: center;
+      }
+
+      .location-social {
+        justify-content: center;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   .advantages {
@@ -192,6 +195,7 @@
 
       .card-1 {
         .flex();
+
         img {
           order: 2;
         }
@@ -202,6 +206,7 @@
         .card-3_1 {
           display: none;
         }
+
         .card-3_2 {
           display: block;
         }
@@ -214,12 +219,14 @@
         p {
           width: auto;
         }
+
         width: 100%;
       }
 
       .card-4 {
         display: none;
       }
+
       img {
         max-height: 200px;
         max-width: 400px;
@@ -230,17 +237,20 @@
   .menu {
     .menu-card {
       flex-direction: column;
+
       .menu-description > * {
-          margin: 0;
+        margin: 0;
       }
     }
   }
 
   .interior {
     margin: 0;
+
     .interior-photos {
       max-width: 368px;
       margin: auto;
+
       img {
         width: 100%;
         height: 178px;
@@ -266,16 +276,19 @@
       gap: 40px;
       flex-direction: column;
       align-items: center;
+
       .footer-right_group {
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+
         .footer-btn {
           padding: 17px;
         }
       }
     }
+
     .rights {
       display: none;
     }
@@ -290,9 +303,11 @@
         left: 0;
       }
     }
+
     .hooker-2 {
       width: 290px;
     }
+
     .info-description {
       h1 {
         font-size: 24px;
@@ -302,12 +317,14 @@
 
   .masters {
     .slider {
-      .slide{
+      .slide {
         width: 290px;
+
         img {
           width: 290px;
           height: 290px;
         }
+
         .slide-description {
           width: 290px;
         }
@@ -330,7 +347,8 @@
     span {
       width: 290px;
     }
-    .stocks-cards{
+
+    .stocks-cards {
       .stocks-card {
         width: 290px;
       }
@@ -344,34 +362,37 @@
   }
 
   .booking {
-  .booking-block{
-    padding: 30px 0;
-    .order {
-      .booking-input {
-        width: 290px;
-      }
-      .booking-btn {
-        width: 290px;
-      }
-      .booking-info {
-        width: 290px;
+    .booking-block {
+      padding: 30px 0;
+
+      .order {
+        .booking-input {
+          width: 290px;
+        }
+
+        .booking-btn {
+          width: 290px;
+        }
+
+        .booking-info {
+          width: 290px;
+        }
       }
     }
   }
-}
+
   .location {
     .location-content {
       .location-info {
         order: 1;
       }
+
       &:first-child {
         order: 2;
       }
     }
   }
 }
-
-
 
 
 .header-navigation.open {
