@@ -7,7 +7,24 @@ let slide_6 = $("#slide_6").addClass('hidden');
 let prevBtn = $("#prev-btn");
 let nextBtn = $("#next-btn");
 let circleBtns = $(".circle-btns");
+circleBtns.addClass('hidden');
 
+let stocks_1 = $("#stocks_1");
+let stocks_2 = $("#stocks_2");
+let stocks_3 = $("#stocks_3");
+let circleMenu = $('.circle-btns_menu');
+circleMenu.addClass('hidden');
+
+const stocks = [stocks_1, stocks_2, stocks_3];
+
+let interior_1= $("#interior_1");
+let interior_2 = $("#interior_2");
+let interior_3 = $("#interior_3");
+let interior_4 = $("#interior_4");
+let circleInterior = $('.circle-btns_interior');
+
+const interior = [interior_1, interior_2, interior_3, interior_4];
+circleInterior.addClass('hidden');
 
 
 const slides = [slide_1, slide_2, slide_3, slide_4, slide_5, slide_6];
@@ -52,28 +69,57 @@ let circleBtn = $(".circle-btn");
 circleBtn.addClass('hidden');
 
 
-
 for (let i = 0; i < slides.length; i++) {
   let buttonCircle = document.createElement("button");
-  console.log(buttonCircle);
-  buttonCircle.setAttribute('class','btn circle-btn');
+  buttonCircle.setAttribute('class', 'btn circle-btn');
   buttonCircle.onclick = function () {
-    let activeSlide = i;
     slides.forEach((item, index) => {
       if (index === i) {
         item.removeClass('hidden');
+        item.fadeIn();
+
       } else {
         item.addClass('hidden');
       }
     })
   }
-
-
   circleBtns.append(buttonCircle);
 }
 
 
 
+for (let i = 0; i < stocks.length; i++) {
+  let buttonCircle = document.createElement("button");
+  buttonCircle.setAttribute('class', 'btn circle-btn');
+  buttonCircle.onclick = function () {
+    stocks.forEach((item, index) => {
+      if (index === i) {
+        item.show();
+      } else {
+        item.hide();
+      }
+    })
+  }
+  circleMenu.append(buttonCircle);
+}
+
+
+
+
+for (let i = 0; i < interior.length; i++) {
+  let buttonCircle = document.createElement("button");
+  buttonCircle.setAttribute('class', 'btn circle-btn');
+  buttonCircle.onclick = function () {
+    interior.forEach((item, index) => {
+      if (index === i) {
+        item.show();
+      } else {
+        item.hide();
+      }
+    })
+  }
+  circleInterior.append(buttonCircle);
+}
 
 
 window.onresize = function (event) {
@@ -83,6 +129,14 @@ window.onresize = function (event) {
     circleBtn.addClass('hidden');
     prevBtn.removeClass('hidden');
     nextBtn.removeClass('hidden');
+    circleBtns.addClass('hidden');
+    circleMenu.addClass('hidden');
+    circleInterior.addClass('hidden');
+    stocks[1].show();
+    stocks[2].show();
+    interior[1].show();
+    interior[2].show();
+    interior[3].show();
 
     activeSlides = [0, 1, 3];
   }
@@ -93,9 +147,19 @@ window.onresize = function (event) {
     circleBtn.addClass('hidden');
     prevBtn.removeClass('hidden');
     nextBtn.removeClass('hidden');
+    circleBtns.addClass('hidden');
+    circleMenu.addClass('hidden');
+    circleInterior.addClass('hidden');
+    stocks[0].show();
+    stocks[1].show();
+    stocks[2].show();
+    interior[1].show();
+    interior[2].show();
+    interior[3].show();
 
     activeSlides = [0, 1];
   }
+
 
 
   if (window.screen.width <= 858) {
@@ -104,7 +168,15 @@ window.onresize = function (event) {
     activeSlides = [0];
     prevBtn.addClass('hidden');
     nextBtn.addClass('hidden');
-    circleBtn.addClass('hidden');
+    circleBtns.removeClass('hidden');
+    circleMenu.removeClass('hidden');
+    circleInterior.removeClass('hidden');
+    stocks[1].hide();
+    stocks[2].hide();
+    interior[1].hide();
+    interior[2].hide();
+    interior[3].hide();
+
   }
 };
 

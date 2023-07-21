@@ -69,9 +69,6 @@ body {
 //  opacity: 0.1;
 //}
 
-.info {
-
-}
 
 .logo {
   display: flex;
@@ -192,11 +189,13 @@ body {
   }
 }
 
+
 .circle-btn {
   border-radius: 50%;
   width: 15px;
   height: 15px;
   border: 1px solid #6224df;
+  margin: 15px;
 }
 .content {
   position: relative;
@@ -219,6 +218,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 90px;
+
   .hooker-1 {
     display: flex;
   }
@@ -245,10 +245,17 @@ body {
     .info-btn {
       padding: 17px;
       width: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
     }
   }
 
-  .info-discount {
+  .hooker {
     position: relative;
 
     .discount {
@@ -473,18 +480,20 @@ body {
 
       display: flex;
       justify-content: space-between;
+      .menu-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
       &:last-child {
         border: none;
         box-shadow: none;
 
         .additives {
-          margin-bottom: 60px;
+          //margin-bottom: 60px;
         }
 
-        p {
-          margin-bottom: 0;
-        }
 
         .additives {
           font-size: 15px;
@@ -499,8 +508,7 @@ body {
       }
 
       p {
-        margin-top: 20px;
-        margin-bottom: 38px;
+        margin-bottom: 20px;
       }
 
       span {
@@ -745,6 +753,13 @@ body {
 
       .footer-btn {
         width: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: #FFFFFF;
+        }
       }
     }
   }

@@ -85,23 +85,26 @@
   </header>
 
   <section class="info " id="about">
-<!--    <div class="background"><img src="src/images/background.png" alt=""> </div>-->
     <div class="info-description animate__animated wow animate__backInLeft">
       <h1>С нами вы почувствуете
         дымный вкус жизни!
       </h1>
+      <div class="hooker hooker-2">
+        <div class="discount">Новым гостям 15% скидки !</div>
+        <img src="src/images/ugli_2.png" alt="">
+      </div>
       <p>Только качественный табак и лучшее обслуживание. Мы создаем тренды в кальянных тусовках и у нас каждый сможет
         почувствовать себя важным
         <span>гостем и неотъемлемой частью заведения.</span>
       </p>
-      <button class="btn info-btn">
-        Забронировать стол
-      </button>
+      <nav class="btn info-btn">
+        <a href="#reserve">Забронировать стол</a>
+      </nav>
     </div>
     <div class="info-discount animate__animated wow animate__backInRight">
-      <div class="discount">Новым гостям 15% скидки !</div>
-      <img src="src/images/ugli.png" alt="" class="hooker-1">
-      <img src="src/images/ugli_2.png" alt="" class="hooker-2">
+      <div class="hooker hooker-1">
+        <div class="discount">Новым гостям 15% скидки !</div>
+        <img src="src/images/ugli.png" alt=""></div>
     </div>
   </section>
 
@@ -135,7 +138,7 @@
           <p>По субботам спокойствие и размеренность уходят
             на второй план, ведь начиная с 20:00 за пульты встают наши диджеи и начинаются веселые танцы.</p>
         </div>
-        <img class="card-3_1" src="src/images/card-3.png" alt="card" >
+        <img class="card-3_1" src="src/images/card-3.png" alt="card">
         <img class="card-3_2" src="src/images/card-3_2.png" alt="card">
       </div>
       <div class="card-4">
@@ -213,7 +216,7 @@
           <span class="experience">
          Стаж работы: 2,5 года
         </span>
-          <span class="skills">Выебет мозг</span>
+          <span class="skills">Подберет лучший кальян по вашим требованиям!</span>
         </div>
       </div>
     </div>
@@ -235,8 +238,8 @@
       <ul>
         <li id="hookahs"><a href="#">Кальяны</a></li>
         <li id="snacks"><a href="#">Закуски</a></li>
-        <li><a href="#" id="tea">Чай и б/з коктейли</a></li>
-        <li><a href="#" id="bar_card">Барная карта</a></li>
+        <li id="tea"><a href="#">Чай и б/з коктейли</a></li>
+        <li id="bar_card"><a href="#">Барная карта</a></li>
       </ul>
     </nav>
     <div class="menu-cards" id="cards-1">
@@ -303,10 +306,8 @@
     <div class="menu-cards" id="cards-2">
       <div class="menu-card">
         <div class="menu-description">
-          <h2>zalupa3 v чаша</h2>
-          <p>Табак на выбор (в ассортименте) </p>
-          <p>Сессия на классической чаше рассчитана на компанию
-            до 3 гостей.</p>
+          <h2>Фрукты </h2>
+          <p>Отлично подходит фруктовая тарелка с продуктами, сочетающимися по вкусу с табаком</p>
           <span>750 руб.</span>
         </div>
         <div>
@@ -364,7 +365,7 @@
     <div class="menu-cards" id="cards-3">
       <div class="menu-card">
         <div class="menu-description">
-          <h2>zalupa3 v чаша</h2>
+          <h2>3 чаша</h2>
           <p>Табак на выбор (в ассортименте) </p>
           <p>Сессия на классической чаше рассчитана на компанию
             до 3 гостей.</p>
@@ -425,7 +426,7 @@
     <div class="menu-cards" id="cards-4">
       <div class="menu-card">
         <div class="menu-description">
-          <h2>zalupa4 v чаша</h2>
+          <h2>4 чаша</h2>
           <p>Табак на выбор (в ассортименте) </p>
           <p>Сессия на классической чаше рассчитана на компанию
             до 3 гостей.</p>
@@ -491,54 +492,56 @@
 до 31.12.2020. Подробности уточняйте по телефону или у официанта.
 </span>
     <div class="stocks-cards">
-      <div class="stocks-card">
+      <div class="stocks-card" id="stocks_1">
         <img src="src/images/stock-1.png" alt="">
         <div class="stocks-card-description">Скидка 25% на любой кальян
           с понедельника по четверг.
         </div>
       </div>
-      <div class="stocks-card">
+      <div class="stocks-card" id="stocks_2">
         <img src="src/images/stock-2.png" alt="">
         <div class="stocks-card-description">При покупке любого премиум кальяна
           1 л чая в подарок!
         </div>
       </div>
-      <div class="stocks-card">
+      <div class="stocks-card" id="stocks_3">
         <img src="src/images/stock-3.png" alt="">
         <div class="stocks-card-description">Отметьте нас в Instagram @smoke_city
           и получите скидку 10% на действующий заказ.
         </div>
       </div>
     </div>
+    <div class="circle-btns_menu"></div>
   </section>
 
   <section class="interior animate__animated wow animate__backInLeft" id="gallery">
     <h2>Посмотрите нашу обстановку внутри</h2>
     <div class="interior-photos">
-      <div class="interior-image">
+      <div class="interior-image" id="interior_1">
         <a href="src/images/interior-1.png" class="card-image">
           <img src="src/images/interior-1.png" alt="">
         </a>
       </div>
-      <div class="interior-image">
+      <div class="interior-image" id="interior_2">
         <a href="src/images/interior-2.png" class="card-image">
           <img src="src/images/interior-2.png" alt="">
         </a>
       </div>
-      <div class="interior-image">
+      <div class="interior-image" id="interior_3">
         <a href="src/images/interior-3.png" class="card-image">
           <img src="src/images/interior-3.png" alt="">
         </a>
       </div>
-      <div class="interior-image">
+      <div class="interior-image" id="interior_4">
         <a href="src/images/interior-4.png" class="card-image">
           <img src="src/images/interior-4.png" alt="">
         </a>
       </div>
     </div>
+    <div class="circle-btns_interior"></div>
   </section>
 
-  <section class="booking animate__animated wow animate__backInLeft">
+  <section class="booking animate__animated wow animate__backInLeft"  id="reserve">
     <div class="booking-block">
       <div class="order" id="order">
         <h2>Забронируйте столик или VIP-комнату
@@ -587,14 +590,14 @@
         <div>
           <h2>Следите за нами в соц.сетях</h2>
           <div class="location-social">
-            <a href="">
+            <a href="https://www.instagram.com/itlogia.ru/" target="_blank">
               <img src="src/images/instagram.png" alt="inst">
             </a>
-            <a href="">
+            <a href="https://vk.com/itlogia_ru" target="_blank">
               <img src="src/images/vk.png" alt="vk">
 
             </a>
-            <a href="">
+            <a href="https://www.whatsapp.com/?lang=ru" target="_blank">
               <img src="src/images/whatsapp.png" alt="whatsapp">
             </a>
           </div>
@@ -613,7 +616,7 @@
         </div>
       </div>
       <div class="footer-right_group animate__animated wow animate__backInRight">
-        <button class="btn footer-btn" type="submit"> Забронировать</button>
+        <nav  class="btn footer-btn" ><a href="#reserve">Забронировать</a></nav>
         <div class="phone">
           <img src="src/images/phone-call.png" alt="phone-call">
           <div>
@@ -642,17 +645,14 @@
 </section>
 
 
-
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/less/dist/less.min.js"></script>
 <script src="node_modules/inputmask/dist/jquery.inputmask.min.js"></script>
 <script src="node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-<script  src="src/scripts/slick.min.js"></script>
 
-<!--<script src="src/scripts/wow.min.js"></script>-->
-<!--<script src="src/scripts/slider.js"></script>-->
+<script src="src/scripts/wow.min.js"></script>
 <script src="gulpfile.js"></script>
-<!--<script src="src/scripts/animate.js"></script>-->
+<script src="src/scripts/animate.js"></script>
 <script src="index.js"></script>
 
 </body>

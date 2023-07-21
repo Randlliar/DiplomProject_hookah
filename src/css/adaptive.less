@@ -120,6 +120,10 @@
 
       .hooker-2 {
         display: flex;
+        justify-content: center;
+        .discount {
+          left: 25px;
+        }
       }
     }
 
@@ -164,6 +168,7 @@
 
     .location {
       text-align: center;
+      margin: 0 auto 50px;
 
       .location-content {
         flex-wrap: wrap;
@@ -278,7 +283,92 @@
 }
 
 @media screen and (max-width: 424px) {
+  .info {
 
+    .hooker {
+      .discount {
+        left: 0;
+      }
+    }
+    .hooker-2 {
+      width: 290px;
+    }
+    .info-description {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .masters {
+    .slider {
+      .slide{
+        width: 290px;
+        img {
+          width: 290px;
+          height: 290px;
+        }
+        .slide-description {
+          width: 290px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    .menu-links {
+      ul {
+        //overflow: scroll;
+        gap: 20px;
+        //display: none;
+        //width: 400px;
+      }
+    }
+  }
+
+  .stocks {
+    span {
+      width: 290px;
+    }
+    .stocks-cards{
+      .stocks-card {
+        width: 290px;
+      }
+    }
+  }
+
+  .interior {
+    .interior-photos {
+      max-width: 290px;
+    }
+  }
+
+  .booking {
+  .booking-block{
+    padding: 30px 0;
+    .order {
+      .booking-input {
+        width: 290px;
+      }
+      .booking-btn {
+        width: 290px;
+      }
+      .booking-info {
+        width: 290px;
+      }
+    }
+  }
+}
+  .location {
+    .location-content {
+      .location-info {
+        order: 1;
+      }
+      &:first-child {
+        order: 2;
+      }
+    }
+  }
 }
 
 
