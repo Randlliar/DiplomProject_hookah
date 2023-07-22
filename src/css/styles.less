@@ -17,7 +17,7 @@ body {
 .container() {
   margin: 0 auto;
   max-width: 1110px;
-  padding: 0 15px;
+  //padding: 0 15px;
 }
 
 .text-montserrat() {
@@ -41,9 +41,7 @@ body {
 
 .card() {
   display: flex;
-  max-width: 510px;
   border: 1px solid #6224df;
-  //align-items: center;
   justify-content: center;
   padding: 30px;
   &:hover {
@@ -54,7 +52,6 @@ body {
     font-family: "Panton", sans-serif;
     color: #6224DFFF;
     font-weight: bold;
-    margin-bottom: 20px;
   }
   p {
     font-size: 15px;
@@ -296,14 +293,15 @@ body {
   .cards {
     .card-1 {
       .card();
-      gap: 45px;
+      gap: 37px;
       margin-bottom: 60px;
     }
 
     .card-2 {
-      gap: 40px;
+      gap: 47px;
       flex-direction: column;
       width: 540px;
+      padding: 28px;
       .card();
 
 
@@ -319,11 +317,10 @@ body {
     .card-3 {
       .card();
       justify-content: space-between;
-      gap: 20px;
-
+      gap: 40px;
 
       p {
-        width: 225px;
+        width: 207px;
       }
     }
 
@@ -331,6 +328,7 @@ body {
       .card();
       border: none;
       flex-direction: column;
+      padding: 43px 0  0 0;
 
       &:hover {
         box-shadow: none;
@@ -484,7 +482,7 @@ body {
 
       .card();
       gap: 20px;
-
+      width: calc(50% - 30px);
       display: flex;
       justify-content: space-between;
 
@@ -497,11 +495,7 @@ body {
       &:last-child {
         border: none;
         box-shadow: none;
-
-        .additives {
-          //margin-bottom: 60px;
-        }
-
+        padding: 30px 0;
 
         .additives {
           font-size: 15px;
