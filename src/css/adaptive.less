@@ -44,7 +44,10 @@
     justify-content: center;
 
     .cards {
-      max-width: 460px;
+      //max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
   }
 
@@ -54,6 +57,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    #slide_3 {
+      visibility: hidden;
+    }
   }
 
   .menu {
@@ -65,6 +72,9 @@
       justify-content: center;
 
       .menu-card {
+        .menu-description {
+          justify-content: space-between;
+        }
         &:last-child {
           display: none;
         }
@@ -205,6 +215,7 @@
   .info {
     .info-description {
       gap: 20px;
+      align-items: center;
     }
 
     .hooker-2 {
@@ -228,6 +239,9 @@
   .advantages {
     .cards {
       text-align: center;
+      //grid-template-columns: 1fr;
+      //grid-auto-flow: column;
+
 
       .card-1 {
         .flex();
@@ -271,14 +285,36 @@
   }
 
   .menu {
-    .menu-card {
-      flex-direction: column;
+    .menu-cards{
+      .menu-card {
+        flex-direction: column;
 
 
-      .menu-description > * {
-        margin: 0;
+        .menu-description  {
+          margin: 0;
+          span {
+            margin-top: 30px;
+          }
+        }
+
+        .menu-image {
+          img {
+            //height: 113px;
+            width: 100%;
+            padding: 30px;
+            object-fit: cover;
+            &:first-child {
+              display: none;
+            }
+
+            &:last-child {
+              display: inline-block;
+            }
+          }
+        }
       }
     }
+
   }
 
   .interior {
@@ -334,6 +370,7 @@
 
 @media screen and (max-width: 424px) {
 
+
   .header {
     padding-top: 20px;
   }
@@ -343,6 +380,7 @@
   }
 
   .advantages {
+    margin-bottom: 100px;
     .cards {
       .card-1 {
         gap: 30px;
@@ -399,6 +437,7 @@
   }
 
   .info {
+    margin-bottom: 100px;
 
     .hooker {
       .discount {
@@ -418,6 +457,8 @@
   }
 
   .masters {
+    margin-bottom: 100px;
+
     h1 {
       font-size: 20px;
     }
@@ -440,26 +481,39 @@
   }
 
   .menu {
+    margin-bottom: 100px;
+
     .menu-title {
       font-size: 20px;
     }
+
+    .menu-cards {
+      padding: 0;
+    }
+
     .menu-description {
       gap: 20px;
     }
+
     .menu-links {
+      width: 100%;
+      position: relative;
       ul {
-        //overflow: scroll;
-        gap: 20px;
-        //display: none;
+        overflow-x: scroll;
+        gap: 40px;
+        height: 20px;
         //width: 400px;
       }
     }
   }
 
   .stocks {
+    margin-bottom: 100px;
+
     h2 {
       font-size: 20px;
     }
+
     span {
       width: 290px;
     }
@@ -472,9 +526,12 @@
   }
 
   .interior {
+    margin-bottom: 100px;
+
     h2 {
       font-size: 20px;
     }
+
     .interior-photos {
       max-width: 290px;
     }
@@ -484,10 +541,19 @@
     h2 {
       font-size: 20px;
     }
+
     .booking-block {
       padding: 30px 0;
 
+      .order-success {
+        padding: 0 15px;
+        font-size: 32px;
+      }
+
       .order {
+        h2 {
+          max-width: 207px;
+        }
         .booking-input {
           width: 290px;
         }
@@ -499,15 +565,26 @@
         .booking-info {
           width: 290px;
         }
+
+
       }
     }
   }
 
-.location {
-  .location-title {
-    font-size: 20px;
+  .location {
+    .location-title {
+      font-size: 20px;
+    }
+    .location-content {
+      .location-info {
+        gap: 40px;
+        span {
+          width: 270px;
+        }
+      }
+    }
+
   }
-}
 }
 
 

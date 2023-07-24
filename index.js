@@ -120,7 +120,7 @@ for (let i = 0; i < interior.length; i++) {
 
 
 window.onresize = function (event) {
-  if (window.screen.width >= 1249) {
+  if (window.screen.width >= 1149) {
     slides[1].removeClass('hidden');
     slides[2].removeClass('hidden');
     circleBtn.addClass('hidden');
@@ -138,8 +138,8 @@ window.onresize = function (event) {
     activeSlides = [0, 1, 3];
   }
 
-  if (window.screen.width <= 1249 && window.screen.width > 858) {
-    slides[2].addClass('hidden');
+  if (window.screen.width <= 1149 && window.screen.width > 858) {
+    // slides[2].addClass('hidden');
     slides[1].removeClass('hidden');
     circleBtn.addClass('hidden');
     prevBtn.removeClass('hidden');
@@ -218,7 +218,6 @@ tea.on('click', function () {
 
 barCard.on('click', function () {
   menuHandleClick(barCard2, event);
-
 })
 
 
@@ -261,8 +260,6 @@ $('#booking_btn').on('click', function (e) {
     phoneInput.attr("placeholder", "Введите ваш телефон!");
     hasError = true;
   }
-
-  // hasError = checkInput(nameInput) || checkInput(phoneInput);
 
 
   if (!hasError) {
