@@ -190,42 +190,35 @@ snacksCard.hide();
 teaCard.hide();
 barCard2.hide();
 
-hookahs.on('click', function (event) {
-  hookahsCard.css('display', 'flex');
-  hookahsCard.addClass('animate__animated wow animate__fadeInUp');
-  snacksCard.hide();
-  teaCard.hide();
-  barCard2.hide();
-  event.preventDefault()
+menuItems = [hookahsCard, snacksCard, teaCard, barCard2];
 
+
+function menuHandleClick(element, event) {
+  menuItems.forEach(item => item.hide());
+  element.css('display', 'flex');
+  element.addClass('animate__animated wow animate__fadeInUp');
+  event.preventDefault();
+}
+
+
+hookahs.on('click', function (event) {
+  menuHandleClick(hookahsCard, event);
 })
 
 snacks.on('click', function (event) {
-  hookahsCard.hide();
-  snacksCard.css('display', 'flex');
-  snacksCard.addClass('animate__animated wow  animate__fadeInUp');
-  teaCard.hide();
-  barCard2.hide();
-  event.preventDefault()
+  menuHandleClick(snacksCard, event);
+
 })
 
 tea.on('click', function () {
-  hookahsCard.hide();
-  snacksCard.hide();
-  teaCard.css('display', 'flex');
-  teaCard.addClass('animate__animated wow  animate__fadeInUp');
-  barCard2.hide();
-  event.preventDefault()
+  menuHandleClick(teaCard, event);
+
 })
 
 
 barCard.on('click', function () {
-  hookahsCard.hide();
-  snacksCard.hide();
-  teaCard.hide();
-  barCard2.css('display', 'flex');
-  barCard2.addClass('animate__animated wow animate__fadeInUp');
-  event.preventDefault()
+  menuHandleClick(barCard2, event);
+
 })
 
 
@@ -235,28 +228,41 @@ let order = $("#order");
 let orderSuccess = $("#order-success");
 let loader = $(".loader");
 $(phoneInput).inputmask({"mask": "+375 (99) 999-99-99"});
+nameInput.attr("placeholder", "Ваше имя");
+phoneInput.attr("placeholder", "Ваш телефон");
 
+phoneInput.mouseleave(function(){
+  phoneInput.attr("placeholder", "Ваш телефон");
+});
+
+function checkInput(input) {
+  if (!input.val()) {
+    input.css("border-color", "#ff0000");
+
+    return true;
+  } else {
+    input.css("border-color", "#6224df");
+    return false;
+  }
+}
 
 $('#booking_btn').on('click', function (e) {
 
   let hasError = false;
   $('.text-error').hide();
 
-  if (!nameInput.val()) {
-    nameInput.next().show();
-    nameInput.css("border-color", "#ff0000");
+  if (checkInput(nameInput)) {
     hasError = true;
-  } else {
-    nameInput.css("border-color", "#6224df");
+    nameInput.attr("placeholder", "Введите ваше имя!");
+
   }
 
-  if (!phoneInput.val()) {
-    phoneInput.next().show();
-    phoneInput.css("border-color", "#ff0000");
+  if (checkInput(phoneInput)) {
+    phoneInput.attr("placeholder", "Введите ваш телефон!");
     hasError = true;
-  } else {
-    phoneInput.css("border-color", "#6224df");
   }
+
+  // hasError = checkInput(nameInput) || checkInput(phoneInput);
 
 
   if (!hasError) {
