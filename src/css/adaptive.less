@@ -94,7 +94,7 @@
 
 @media screen and (max-width: 1023px) {
   .header {
-    margin: 0 0 35px 0;
+    margin: 0 0 20px 0;
 
     .work-time {
       display: none;
@@ -140,14 +140,19 @@
   .menu {
     margin-bottom: 30px;
 
-    .menu-card {
-      text-align: center;
-      padding: 10px;
+    .menu-cards {
+      .menu-card {
+        text-align: center;
+        padding: 10px;
+        max-width: 510px;
 
-      p {
-        margin-bottom: 0;
+        p {
+          margin-bottom: 0;
+        }
       }
     }
+
+
   }
 
   .stocks {
@@ -177,6 +182,14 @@
       flex-wrap: wrap;
       justify-content: center;
 
+      .map {
+        order: 2;
+      }
+
+      .location-info {
+        order: 1;
+      }
+
       .location-work-time {
         align-items: center;
       }
@@ -189,6 +202,29 @@
 }
 
 @media screen and (max-width: 767px) {
+  .info {
+    .info-description {
+      gap: 20px;
+    }
+
+    .hooker-2 {
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      width: 273px;
+    }
+
+    .hooker {
+      .discount {
+        width: 105px;
+        height: 105px;
+        top: 150px;
+      }
+    }
+  }
+
   .advantages {
     .cards {
       text-align: center;
@@ -203,6 +239,7 @@
       }
 
       .card-2 {
+
         .card-3_1 {
           display: none;
         }
@@ -214,7 +251,6 @@
 
       .card-3 {
         .flex();
-        //width: auto;
 
         p {
           width: auto;
@@ -237,6 +273,7 @@
   .menu {
     .menu-card {
       flex-direction: column;
+
 
       .menu-description > * {
         margin: 0;
@@ -284,7 +321,7 @@
         align-items: center;
 
         .footer-btn {
-          padding: 17px;
+          //padding: 17px;
         }
       }
     }
@@ -296,6 +333,66 @@
 }
 
 @media screen and (max-width: 424px) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .advantages {
+    .cards {
+      .card-1 {
+        gap: 30px;
+
+        img {
+          height: 113px;
+          object-fit: cover;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+      }
+
+      .card-2 {
+        gap: 30px;
+
+        img {
+          height: 113px;
+          object-fit: cover;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+      }
+
+      .card-3 {
+        gap: 30px;
+
+        img {
+          height: 113px;
+          object-fit: cover;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+      }
+
+      .card-4 {
+        gap: 30px;
+
+        img {
+          height: 113px;
+          object-fit: cover;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   .info {
 
     .hooker {
@@ -316,13 +413,18 @@
   }
 
   .masters {
+    h1 {
+      font-size: 20px;
+    }
+
     .slider {
       .slide {
         width: 290px;
 
         img {
           width: 290px;
-          height: 290px;
+          height: 350px;
+          object-fit: cover;
         }
 
         .slide-description {
@@ -381,17 +483,17 @@
     }
   }
 
-  .location {
-    .location-content {
-      .location-info {
-        order: 1;
-      }
-
-      &:first-child {
-        order: 2;
-      }
-    }
-  }
+  //.location {
+  //  .location-content {
+  //    .location-info {
+  //      order: 1;
+  //    }
+  //
+  //    &:first-child {
+  //      order: 2;
+  //    }
+  //  }
+  //}
 }
 
 

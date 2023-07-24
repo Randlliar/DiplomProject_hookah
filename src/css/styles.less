@@ -17,7 +17,7 @@ body {
 .container() {
   margin: 0 auto;
   max-width: 1110px;
-  //padding: 0 15px;
+  padding: 0 15px;
 }
 
 .text-montserrat() {
@@ -41,9 +41,12 @@ body {
 
 .card() {
   display: flex;
+  max-width: 510px;
   border: 1px solid #6224df;
   justify-content: center;
   padding: 30px;
+  height: fit-content;
+
   &:hover {
     .shadow();
   }
@@ -119,8 +122,6 @@ body {
     display: none;
 
     svg {
-      width: 36px;
-      height: 36px;
       fill: #6224df;
     }
   }
@@ -243,7 +244,9 @@ body {
 
       a {
         text-decoration: none;
-        color: #ffffff;      padding: 17px;display: flex;
+        color: #ffffff;
+        padding: 17px;
+        display: flex;
         justify-content: center;
         align-items: center;
 
@@ -281,24 +284,35 @@ body {
   .container();
 
   display: flex;
-  gap: 60px;
+  //gap: 60px;
   align-items: center;
   margin-bottom: 150px;
 
   .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 60px;
+
     .card-1 {
       .card();
       gap: 37px;
-      margin-bottom: 60px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
     }
 
     .card-2 {
       gap: 47px;
       flex-direction: column;
-      width: 540px;
+      max-width: 540px;
       padding: 28px;
       .card();
 
+      h2 {
+        margin-bottom: 20px;
+      }
 
       .card-3_1 {
         display: block;
@@ -311,8 +325,13 @@ body {
 
     .card-3 {
       .card();
+      //max-width: 510px;
       justify-content: space-between;
       gap: 40px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
 
       p {
         width: 207px;
@@ -323,7 +342,14 @@ body {
       .card();
       border: none;
       flex-direction: column;
-      padding: 43px 0  0 0;
+      padding: 43px 0 0 0;
+      margin-bottom: 10px;
+      height: unset;
+      justify-content: flex-end;
+
+      h2 {
+        margin-bottom: 20px;
+      }
 
       &:hover {
         box-shadow: none;
@@ -477,7 +503,7 @@ body {
 
       .card();
       gap: 20px;
-      width: calc(50% - 30px);
+      max-width: calc(50% - 30px);
       display: flex;
       justify-content: space-between;
 
@@ -578,6 +604,7 @@ body {
 .interior {
   .container();
 
+  padding: 0;
   margin-bottom: 270px;
 
   h2 {
@@ -751,7 +778,6 @@ body {
       gap: 45px;
 
       .footer-btn {
-        width: 240px;
 
 
         a {
