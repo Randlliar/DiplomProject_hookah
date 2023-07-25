@@ -49,24 +49,19 @@ let circleBtn = $(".circle-btn");
 circleBtn.addClass('hidden');
 
 
-prevBtn.on("click", function () {
-
-})
 
 for (let i = 0; i < slides.length; i++) {
   let buttonCircle = document.createElement("button");
   buttonCircle.setAttribute('class', 'btn circle-btn');
   buttonCircle.onclick = function () {
     slides.forEach((slide, index) => {
-      let currentOrder =  window.getComputedStyle(slide).order;
-      console.log(currentOrder[i])
-      console.log(index+1)
+      let currentOrder =  +window.getComputedStyle(slide).order;
       $(slide).css('order', index + 1);
 
       if (index === i) {
         $(slide).css('order', '1');
       } else {
-        $(slide).css('order', currentOrder +1);
+        $(slide).css('order', currentOrder + 1);
       }
     });
   }
@@ -277,15 +272,6 @@ $('#booking_btn').on('click', function (e) {
   e.preventDefault();
 })
 
-// document.getElementById('burger').onclick = function () {
-//   document.getElementById('header_navigation').classList.add('open');
-// }
-//
-// document.querySelectorAll('#header_navigation *').forEach((item) => {
-//   item.onclick = () => {
-//     document.getElementById('header_navigation').classList.remove('open');
-//   }
-// })
 
 
 $('#burger').on('click', function () {
