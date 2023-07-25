@@ -7,7 +7,7 @@
   .header {
     .burger {
       display: block;
-      z-index: 1000;
+      z-index: 100;
     }
 
     .header-navigation {
@@ -19,7 +19,7 @@
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.79);
-      z-index: 100;
+      z-index: 1000;
 
       .header-navigation_close {
         display: block;
@@ -58,9 +58,11 @@
     align-items: center;
     text-align: center;
 
-    #slide_3 {
-      visibility: hidden;
+    .slider {
+      width: 730px;
     }
+
+
   }
 
   .menu {
@@ -124,7 +126,7 @@
       margin: auto;
     }
 
-    .hooker-1 {
+    .info-discount {
       display: none;
     }
 
@@ -236,11 +238,15 @@
     }
   }
 
+  .masters {
+    .slider {
+      width: 350px;
+    }
+  }
+
   .advantages {
     .cards {
       text-align: center;
-      //grid-template-columns: 1fr;
-      //grid-auto-flow: column;
 
 
       .card-1 {
@@ -377,6 +383,7 @@
 
   .info {
     margin-bottom: 90px;
+    //gap: 0;
   }
 
   .advantages {
@@ -459,11 +466,13 @@
   .masters {
     margin-bottom: 100px;
 
+
     h1 {
       font-size: 20px;
     }
 
     .slider {
+      width: 290px;
       .slide {
         width: 290px;
 
@@ -587,7 +596,6 @@
   }
 }
 
-
-.header-navigation.open {
+.open {
   display: block;
 }
